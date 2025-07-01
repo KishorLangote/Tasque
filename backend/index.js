@@ -1,21 +1,16 @@
 const express = require("express")
 const dotenv = require("dotenv")
 const cors = require("cors")
-// const serverless = require("serverless-http")
 dotenv.config()
 const { initializeDatabase } = require("./db/db.connect")
 const cookieParser = require ("cookie-parser")
 const todoRoute = require("./routes/todo.route")
 const userRoute = require ("./routes/user.route")
 
-// middleware
-// const corsOption = {
-//   origin: "https://frontend-tasque.vercel.app/login",
-//   credentials: true,
-// }                        // allow frontend to connect
+// middleware         
 
 const corsOptions = {
-  origin: "https://frontend-tasque.vercel.app",     // this allows request from any origin
+  origin: "*",     // this allows request from any origin
   credentials: true,                   // this allows cookies, authorization headers, TLS certi..
   optionSuccessStatus: 200,           // set status code 200 for successful request..
 }
@@ -42,5 +37,3 @@ app.listen(PORT, () => {
   console.log(`Server is running on the port ${PORT}`);
   
 })
-
-// module.exports = serverless(app);
