@@ -1,20 +1,57 @@
-<h1>Tasque</h1>
-<hr>
+<div>
+  <h1>Tasque</h1>
 <p>A full-stack Task Management Application 📝 Description: The Tasque App is a simple & user-friendly task management application that helps users create, view, update, and delete tasks in an organized way. It allows users to keep track of their daily goals or activities, mark them as completed, and remove them once done.</p>
+<hr>
+<h1>Quick Start</h1>
+git clone https://github.com/Gurnav224/Shopalyst.git
 
-🚀 Key Features: ➕ Add Tasks: Instantly add new tasks to your to-do list.
+cd  backend 
+npm install
+npm run dev
 
-✅ Mark as Completed: Easily toggle tasks between completed and pending status.
+cd frontend 
+yarn 
+yarn dev
+<hr>
+<h1>🚀 Key Features: </h1>
 
-🗑️ Delete Tasks: Remove tasks from the list when no longer needed.
-
-💾 Persistent Storage: Tasks are saved using localStorage.
-
-🌐 Responsive Design: Fully responsive interface that works across desktop, tablet, and mobile.
-
+<h4>Authentication</h4>
+<ul>
+  <li>User signup and login with JWT.</li>
+  <li>Protected routes for see the other users task and home.</li>
+</ul>
+<h4>Home</h4>
+<ul>
+  <li>Displays all tasks individually, you can add or delete tasks or mark them as completed.</li>
+  <li>Protected routes for see the other users task and home.</li>
+   <li> ➕ Add Tasks: Instantly add new tasks to your to-do list.</li>
+  <li>✅ Mark as Completed: Easily toggle tasks between completed and pending status.</li>
+  <li>🗑️ Delete Tasks: Remove tasks from the list when no longer needed.</li>
+  <li>💾 Persistent Storage: Tasks are saved using localStorage.</li>
+  <li>🌐 Responsive Design: Fully responsive interface that works across desktop, tablet, and mobile.</li>
+</ul>
+<hr>
 <h2>🧱 Technologies Used: </h2>
-<p>Build with React + Tailwind CSS frontend, Express/Node.js backend, MongoDB database, and JWT-based authentication.</p>
+<ul>
+  <li>React JS</li>
+  <li>React Router</li>
+  <li>Tailwind CSS</li>
+  <li>Node.js</li>
+  <li>Express</li>
+  <li>MongoDB</li>
+  <li>JWT</li>
+</ul>
+
+<h1>API Reference</h1>
+<h1>POST /api/v1/signup </h1>
+<p>request</p>
+{
+    "username": "Kunal",
+    "email": "kunal@gmail.com",
+    "password": "kunal@123"
+}
+
+</div>
 
 
 
-![HOME PAGE](https://github.com/user-attachments/assets/355174c6-3a9e-4240-9076-e9e894cc39df)
