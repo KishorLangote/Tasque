@@ -3,15 +3,15 @@
 <p>A full-stack Task Management Application 📝 Description: The Tasque App is a simple & user-friendly task management application that helps users create, view, update, and delete tasks in an organized way. It allows users to keep track of their daily goals or activities, mark them as completed, and remove them once done.</p>
 <hr>
 <h1>Quick Start</h1>
-git clone https://github.com/Gurnav224/Shopalyst.git
+<p>git clone</p>
 
-cd  backend 
-npm install
-npm run dev
+<p>cd  backend </p>
+<p>npm install</p>
+<p>npm run dev</p>
 
-cd frontend 
-yarn 
-yarn dev
+<p>cd frontend </p>
+<p>yarn </p>
+<p>yarn dev</p>
 <hr>
 <h1>🚀 Key Features: </h1>
 
@@ -45,11 +45,11 @@ yarn dev
 <h1>API Reference</h1>
 <h1>POST /api/v1/signup </h1>
 <p>request</p>
-{
+<p>{
     "username": "Kunal",
     "email": "kunal@gmail.com",
     "password": "kunal@123"
-}
+}</p>
 
 </div>
 
