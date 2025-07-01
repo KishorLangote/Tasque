@@ -1,57 +1,230 @@
-<div>
-  <h1>Tasque</h1>
-<p>A full-stack Task Management Application 📝 Description: The Tasque App is a simple & user-friendly task management application that helps users create, view, update, and delete tasks in an organized way. It allows users to keep track of their daily goals or activities, mark them as completed, and remove them once done.</p>
-<hr>
-<h1>Quick Start</h1>
-<p>git clone</p>
+# Tasque
 
-<p>cd  backend </p>
-<p>npm install</p>
-<p>npm run dev</p>
+A full-stack Todo Management App that helps users create, view, update, and delete todos. It allows users to keep track of their daily goals or activities, mark them as completed & remove them once done. 
+Built with React frontend, Express/Node, MongoDB database and JWT-based authentication.
 
-<p>cd frontend </p>
-<p>yarn </p>
-<p>yarn dev</p>
-<hr>
-<h1>🚀 Key Features: </h1>
+---
 
-<h4>Authentication</h4>
-<ul>
-  <li>User signup and login with JWT.</li>
-  <li>Protected routes for see the other users task and home.</li>
-</ul>
-<h4>Home</h4>
-<ul>
-  <li>Displays all tasks individually, you can add or delete tasks or mark them as completed.</li>
-  <li>Protected routes for see the other users task and home.</li>
-   <li> ➕ Add Tasks: Instantly add new tasks to your to-do list.</li>
-  <li>✅ Mark as Completed: Easily toggle tasks between completed and pending status.</li>
-  <li>🗑️ Delete Tasks: Remove tasks from the list when no longer needed.</li>
-  <li>💾 Persistent Storage: Tasks are saved using localStorage.</li>
-  <li>🌐 Responsive Design: Fully responsive interface that works across desktop, tablet, and mobile.</li>
-</ul>
-<hr>
-<h2>🧱 Technologies Used: </h2>
-<ul>
-  <li>React JS</li>
-  <li>React Router</li>
-  <li>Tailwind CSS</li>
-  <li>Node.js</li>
-  <li>Express</li>
-  <li>MongoDB</li>
-  <li>JWT</li>
-</ul>
+## Demo Link
 
-<h1>API Reference</h1>
-<h1>POST /api/v1/signup </h1>
-<p>request</p>
-<p>{
+[Live Demo](https://tasquee.vercel.app/)
+
+---
+
+
+## Quick start
+
+```
+git clone https://github.com/KishorLangote/Tasque.git
+cd backend
+npm install
+npm run dev
+
+cd frontend
+npm install
+npm run dev
+
+```
+
+---
+
+## Technologies
+- React JS
+- Tailwind CSS
+- React Router
+- Node JS
+- Express
+- MongoDB
+
+---
+
+## Demo Video
+[Loom Video]()
+
+---
+
+
+## Features
+
+**Home**
+- Displays all tasks individually, you can add or delete todos or mark them as completed.
+- Instantly add new todos to your to-do list.
+- Easily toggle tasks between completed and pending status.
+- Remove todos from the list when no longer needed.
+- Todos are saved using localStorage.
+
+**Authentication**
+- User signup and login with JWT.
+- Protected routes for see the other users task and home.
+
+---
+## API Reference
+
+### **POST /api/v1/user/signup**<br>
+Register new user<br>
+```
+request: 
+
+{
     "username": "Kunal",
     "email": "kunal@gmail.com",
     "password": "kunal@123"
-}</p>
+}
 
-</div>
+response: 
+
+[
+  {
+    "message": "User registered successfully",
+    "newUser": {
+        "username": "Kunal",
+        "email": "kunal@gmail.com",
+        "password": "$2b$10$MB7N.iudey4.kPmokFRob.FeHOapjM971U/aFxafhHK301ye2gqB6",
+        "_id": "6863cd027d7a506038a5a73f",
+        "createdAt": "2025-07-01T11:56:50.977Z",
+        "updatedAt": "2025-07-01T11:56:50.977Z",
+        "__v": 0
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODYzY2QwMjdkN2E1MDYwMzhhNWE3M2YiLCJpYXQiOjE3NTEzNzEwMTAsImV4cCI6MTc1MjIzNTAxMH0.4GCkUobG6pThqApZ7OITH8UGsMAXJ6ZY6h4tlCDcBYM"
+ }
+]
+```
+
+### **POST /api/v1/user/login**<br>
+
+```
+request: 
+
+{
+    "email": "kunal@gmail.com",
+    "password": "kunal@123"
+}
+
+response:
+
+[
+  {
+    "message": "User logged in successfully",
+    "user": {
+        "_id": "6863cd027d7a506038a5a73f",
+        "username": "Kunal",
+        "email": "kunal@gmail.com",
+        "password": "$2b$10$MB7N.iudey4.kPmokFRob.FeHOapjM971U/aFxafhHK301ye2gqB6",
+        "createdAt": "2025-07-01T11:56:50.977Z",
+        "updatedAt": "2025-07-01T11:56:50.997Z",
+        "__v": 0,
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODYzY2QwMjdkN2E1MDYwMzhhNWE3M2YiLCJpYXQiOjE3NTEzNzEwMTAsImV4cCI6MTc1MjIzNTAxMH0.4GCkUobG6pThqApZ7OITH8UGsMAXJ6ZY6h4tlCDcBYM"
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODYzY2QwMjdkN2E1MDYwMzhhNWE3M2YiLCJpYXQiOjE3NTEzNzExODUsImV4cCI6MTc1MjIzNTE4NX0.mFkiFyB7Q0SCF10Hqoh2P8pjCyWnnBTX7mvGQQLUphA"
+}
+]
+
+```
+### **GET /api/v1/user/logout**<br> 
+
+### **GET /api/v1/todo/fetch**<br>
+List all todos<br>
+```
+response:
+
+[
+  {
+    "message": "Todo Fetched Successfully",
+    "todos": [
+        {
+            "_id": "6861f69560c56d09df344cb7",
+            "text": "todo5",
+            "completed": false,
+            "user": "6861f59460c56d09df344cab",
+            "createdAt": "2025-06-30T02:29:41.111Z",
+            "updatedAt": "2025-06-30T03:03:38.575Z",
+            "__v": 0
+        }
+    ]
+}
+]
+
+```
+### **POST /api/v1/todo/create**<br>
+create todos<br>
+```
+request:
+
+  {
+    "text": "Go for walk",
+    "completed": true
+  }
+
+response:
+
+[ 
+  {
+    "message": "Todo Created Successfully",
+    "newTodo": {
+        "text": "Go for walk",
+        "completed": true,
+        "user": "6861f59460c56d09df344cab",
+        "_id": "6863c9357d7a506038a5a733",
+        "createdAt": "2025-07-01T11:40:37.116Z",
+        "updatedAt": "2025-07-01T11:40:37.116Z",
+        "__v": 0
+    }
+ }
+]
 
 
+```
+
+### **PUT /api/v1/todo/update/:todoId**<br>
+Update todo<br>
+```
+request:
+
+{
+    "text": "Go for walk",
+    "completed": false
+}
+
+response: 
+
+[
+  {
+    "message": "Todo updated Successfully",
+    "todo": {
+        "_id": "6863c9357d7a506038a5a733",
+        "text": "Go for walk",
+        "completed": false,
+        "user": "6861f59460c56d09df344cab",
+        "createdAt": "2025-07-01T11:40:37.116Z",
+        "updatedAt": "2025-07-01T11:48:37.037Z",
+        "__v": 0
+    }
+ }
+]
+```
+### **DELETE /api/v1/todo/delete/:todoId**<br>
+Delete todo<br>
+```
+response: 
+
+[
+  {
+    "message": "Todo deleted Successfully",
+    "todo": {
+        "_id": "6862637957d28171e15cb168",
+        "text": "todo5-3",
+        "completed": true,
+        "user": "6861f59460c56d09df344cab",
+        "createdAt": "2025-06-30T10:14:17.430Z",
+        "updatedAt": "2025-06-30T10:14:17.430Z",
+        "__v": 0
+    }
+  }
+]
+
+```
+---
+
+## Contact
+For bugs or feature request, please react out to kishorlangote2@gmail.com
 
