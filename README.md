@@ -7,8 +7,7 @@ Built with React frontend, Express/Node, MongoDB database and JWT-based authenti
 
 ## Demo Link
 
-
-<a href="https://frontend-tasquee.vercel.app/login">Live Demo</a>
+[Live Demo](https://frontend-tasquee.vercel.app/login)
 
 
 ---
@@ -41,7 +40,7 @@ npm run dev
 ---
 
 ## Demo Video
-[Loom Video]()
+[Loom Video](https://www.loom.com/share/e0f874f180684fad8bb24ba2c5831166?sid=81ca0d51-b6e8-4e04-9eac-066ec5f3bdb9)
 
 ---
 
