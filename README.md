@@ -8,7 +8,7 @@ Built with React frontend, Express/Node, MongoDB database and JWT-based authenti
 ## Demo Link
 
 
-<a href="https://frontend-tasquee.vercel.app/login" target="_blank">Live Demo</a>
+<a href="https://frontend-tasquee.vercel.app/login" target="_blank" rel="noopener noreferrer">Live Demo</a>
 
 
 ---
